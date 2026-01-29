@@ -10,6 +10,9 @@ import Contact from "../components/AboutMe/Contact.jsx";
 import Hobbies from "../components/AboutMe/Hobbies.jsx";
 import MyStory from "../components/AboutMe/MyStory.jsx";
 
+import SiteHistory from "../components/AboutUs/SiteHistory.jsx";
+import SiteMission from "../components/AboutUs/SiteMission.jsx";
+
 function App() {
   return (
     <div className="App">
@@ -21,6 +24,11 @@ function App() {
           <Route path="contact" element={<Contact />} />
           <Route path="hobbies" element={<Hobbies />} />
           <Route path="my-story" element={<MyStory />} />
+        </Route>
+
+        <Route path="about-us" element={<AboutUs />}>
+          <Route path="site-history" element={<SiteHistory />} />
+          <Route path="site-mission" element={<SiteMission />} />
         </Route>
 
         <Route path="reviews" element={<Reviews />} />
