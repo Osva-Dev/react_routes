@@ -18,6 +18,8 @@ import SiteMission from "../components/AboutUs/SiteMission.jsx";
 
 import Review from "../components/Review/Review.jsx";
 
+import PageNotFound from "../components/PageNotFound/PageNotFound.jsx";
+
 function App() {
   const [reviews, setReviews] = useState([]); // Nueva variable useState
 
@@ -38,7 +40,9 @@ function App() {
   return (
     <div className="App">
       <Header />
+
       <Routes>
+        <Route path="*" element={<PageNotFound />} />
         <Route path="/" element={<Dashboard />} />
         <Route path="/reviews" element={<Reviews reviews={reviews} />} />
         <Route
